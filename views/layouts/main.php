@@ -28,7 +28,7 @@ AppAsset::register($this);
             <div class="col-lg-11">
                 <form class="navbar-form navbar-right" role="search">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
+                        <input type="text" class="form-control" placeholder="Search sale">
                     </div>
                     <button type="submit" class="btn btn-default">Submit</button>
                 </form>

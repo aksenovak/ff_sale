@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Post;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -50,6 +51,17 @@ class SiteController extends Controller
     public function actionIndex()
     {
         return $this->render('index');
+    }
+
+    public function actionPosts()
+    {
+        $posts = Post::find()
+            ->orderBy(['created' => SORT_DESC])
+            ->all();
+
+        return $this->render('posts', [
+            'posts' => $posts,
+        ]);
     }
 
     public function actionLogin()
